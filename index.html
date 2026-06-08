@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DropTracker — O radar de saldos de streetwear" />
+  <meta property="og:title" content="DropTracker — Nunca percas um drop." />
+  <meta property="og:description" content="Community-powered sale predictions for Nude Project, Blue Banana & Fake Gods. Real patterns. Real alerts. Zero FOMO." />
+  <title>DROP//TRACKER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            acid: '#e8ff00',
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { font-family: 'Space Grotesk', sans-serif; }
+    body { background-color: #080808; color: #f0f0f0; }
+    .signal-bar { display: inline-block; width: 6px; border-radius: 1px; }
+    .card-hover { transition: border-color 0.2s ease; }
+    .card-hover:hover { border-color: #e8ff00; }
+    .btn-ghost { transition: background-color 0.2s ease, color 0.2s ease; }
+    .btn-ghost:hover { background-color: #e8ff00; color: #080808; }
+    .btn-cta-nav { transition: background-color 0.2s ease, color 0.2s ease; }
+    .btn-cta-nav:hover { background-color: #080808; color: #e8ff00; border-color: #e8ff00; }
+    .pulse-dot { animation: pulse-green 1.5s infinite; }
+    @keyframes pulse-green {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    input::placeholder { color: #444; }
+  </style>
+</head>
+<body class="dark bg-[#080808] text-[#f0f0f0]">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#080808] border-b border-[#1a1a1a]">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-extrabold tracking-tight" style="letter-spacing: -0.03em;">
+        DROP<span style="color: #e8ff00;">//</span>TRACKER
+      </a>
+      <a
+        href="#alerts"
+        class="btn-cta-nav px-5 py-2 rounded-full font-bold text-sm border-2 border-[#e8ff00]"
+        style="background-color: #e8ff00; color: #080808;"
+      >
+        ACTIVATE ALERTS →
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex items-center justify-center px-6 pt-20">
+      <div class="text-center max-w-4xl mx-auto">
+
+        <!-- Eyebrow -->
+        <div class="flex items-center justify-center gap-2 mb-8">
+          <span class="pulse-dot w-2 h-2 rounded-full" style="background-color: #00ff88; display: inline-block;"></span>
+          <span class="text-xs font-bold tracking-widest uppercase" style="color: #555;">[ LIVE RADAR ACTIVE ]</span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="font-extrabold leading-none mb-6" style="font-size: clamp(3.5rem, 10vw, 7rem); letter-spacing: -0.03em;">
+          <span class="block">NEVER MISS</span>
+          <span class="block">A DROP<span style="color: #e8ff00;">.</span></span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-lg mx-auto mb-10" style="color: #888; max-width: 480px; line-height: 1.6;">
+          Community-powered sale predictions for Nude Project, Blue Banana &amp; Fake Gods. Real patterns. Real alerts. Zero FOMO.
+        </p>
+
+        <!-- Stats -->
+        <div class="flex items-center justify-center gap-4 flex-wrap">
+          <div class="border border-[#222] px-5 py-3 text-center" style="border-radius: 2px;">
+            <div class="text-2xl font-extrabold" style="color: #e8ff00; letter-spacing: -0.03em;">2,847</div>
+            <div class="text-xs font-bold tracking-widest mt-1" style="color: #555;">MEMBERS TRACKING</div>
+          </div>
+          <div class="border border-[#222] px-5 py-3 text-center" style="border-radius: 2px;">
+            <div class="text-2xl font-extrabold" style="color: #e8ff00; letter-spacing: -0.03em;">3</div>
+            <div class="text-xs font-bold tracking-widest mt-1" style="color: #555;">DROPS PREDICTED</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BRAND RADAR SECTION -->
+    <section class="px-6 py-24 max-w-7xl mx-auto">
+
+      <!-- Section Label -->
+      <div class="mb-10">
+        <p class="text-xs font-bold tracking-widest uppercase mb-2" style="color: #555;">ACTIVE RADAR</p>
+        <h2 class="text-3xl font-bold" style="letter-spacing: -0.03em;">Current Drop Predictions</h2>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+        <!-- Card 1: Nude Project -->
+        <div class="card-hover border border-[#222] p-6" style="background: #111; border-radius: 2px;">
+          <!-- Top Row -->
+          <div class="flex items-start justify-between mb-5">
+            <span class="text-xl font-bold" style="letter-spacing: -0.02em;">Nude Project</span>
+            <span class="text-xs font-bold px-2 py-1" style="background: #e8ff00; color: #080808; border-radius: 2px;">ALTA PROBABILIDADE</span>
+          </div>
+
+          <!-- Divider -->
+          <div class="border-t mb-5" style="border-color: #1e1e1e;"></div>
+
+          <!-- Signal Strength -->
+          <div class="mb-4">
+            <p class="text-xs font-bold tracking-widest uppercase mb-2" style="color: #555;">Signal Strength</p>
+            <div class="flex items-end gap-1">
+              <div class="signal-bar" style="height: 8px; background: #e8ff00;"></div>
+              <div class="signal-bar" style="height: 12px; background: #e8ff00;"></div>
+              <div class="signal-bar" style="height: 16px; background: #e8ff00;"></div>
+              <div class="signal-bar" style="height: 20px; background: #e8ff00;"></div>
+              <div class="signal-bar" style="height: 24px; background: #333;"></div>
+            </div>
+          </div>
+
+          <!-- Prediction -->
+          <p class="text-sm mb-3" style="color: #aaa; line-height: 1.6;">
+            "Year 8 Anniversary — Julho 2025. Histórico confirma: saldo surpresa com password nos primeiros 10 minutos."
+          </p>
+          <div class="text-xs mb-6" style="color: #555;">🔍 Padrão detetado: 3 anos consecutivos</div>
+
+          <!-- CTA Button -->
+          <button class="btn-ghost w-full border border-[#333] py-3 text-xs font-bold tracking-widest uppercase" style="border-radius: 2px;">
+            TRACK THIS DROP
+          </button>
+        </div>
+
+        <!-- Card 2: Blue Banana (Highlighted) -->
+        <div class="card-hover border p-6" style="background: #111; border-color: #e8ff00; border-radius: 2px;">
+          <!-- Top Row -->
+          <div class="flex items-start justify-between mb-5">
+            <span class="text-xl font-bold" style="letter-spacing: -0.02em;">Blue Banana</span>
+            <span class="text-xs font-bold px-2 py-1" style="background: #ff3333; color: #fff; border-radius: 2px; animation: pulse 1.5s infinite;">DROP IMINENTE</span>
+          </div>
+
+          <!-- Divider -->
+          <div class="border-t mb-5" style="border-color: #1e1e1e;"></div>
+
+          <!-- Signal Strength -->
+          <div class="mb-4">
+            <p class="text-xs font-bold tracking-widest uppercase mb-2" style="color: #555;">Signal Strength</p>
+            <div class="flex items-end gap-1">
+              <div class="signal-bar" style="height: 8px; background: #e8ff00;"></div>
+              <div class="signal-bar" style="height: 12px; background: #e8ff00;"></div>
+              <div class="signal-bar" style="height: 16px; background: #e8ff00;"></div>
+              <div class="signal-bar" style="height: 20px; background: #e8ff00;"></div>
+              <div class="signal-bar" style="height: 24px; background: #e8ff00;"></div>
+            </div>
+          </div>
+
+          <!-- Prediction -->
+          <p class="text-sm mb-4" style="color: #aaa; line-height: 1.6;">
+            "Saldo de Verão confirmado. Arranque previsto para 1 de Julho."
+          </p>
+
+          <!-- Countdown -->
+          <div class="flex gap-3 mb-6">
+            <div class="text-center flex-1">
+              <div id="cd-days" class="text-3xl font-mono font-bold" style="color: #e8ff00; letter-spacing: -0.03em;">00</div>
+              <div class="text-xs font-bold tracking-widest mt-1" style="color: #555;">DIAS</div>
+            </div>
+            <div class="text-center flex-1">
+              <div id="cd-hours" class="text-3xl font-mono font-bold" style="color: #e8ff00; letter-spacing: -0.03em;">00</div>
+              <div class="text-xs font-bold tracking-widest mt-1" style="color: #555;">HORAS</div>
+            </div>
+            <div class="text-center flex-1">
+              <div id="cd-mins" class="text-3xl font-mono font-bold" style="color: #e8ff00; letter-spacing: -0.03em;">00</div>
+              <div class="text-xs font-bold tracking-widest mt-1" style="color: #555;">MINS</div>
+            </div>
+            <div class="text-center flex-1">
+              <div id="cd-secs" class="text-3xl font-mono font-bold" style="color: #e8ff00; letter-spacing: -0.03em;">00</div>
+              <div class="text-xs font-bold tracking-widest mt-1" style="color: #555;">SEGS</div>
+            </div>
+          </div>
+          <div id="cd-expired" class="hidden text-center text-xs font-bold tracking-widest mb-4" style="color: #e8ff00;">DROP EM CURSO — VERIFICA O SITE</div>
+
+          <!-- CTA Button -->
+          <button class="btn-ghost w-full border border-[#333] py-3 text-xs font-bold tracking-widest uppercase" style="border-radius: 2px;">
+            TRACK THIS DROP
+          </button>
+        </div>
+
+        <!-- Card 3: Fake Gods -->
+        <div class="card-hover border border-[#222] p-6" style="background: #111; border-radius: 2px;">
+          <!-- Top Row -->
+          <div class="flex items-start justify-between mb-5">
+            <span class="text-xl font-bold" style="letter-spacing: -0.02em;">Fake Gods</span>
+            <span class="text-xs font-bold px-2 py-1" style="background: #222; color: #888; border-radius: 2px;">EM OBSERVAÇÃO</span>
+          </div>
+
+          <!-- Divider -->
+          <div class="border-t mb-5" style="border-color: #1e1e1e;"></div>
+
+          <!-- Signal Strength -->
+          <div class="mb-4">
+            <p class="text-xs font-bold tracking-widest uppercase mb-2" style="color: #555;">Signal Strength</p>
+            <div class="flex items-end gap-1">
+              <div class="signal-bar" style="height: 8px; background: #e8ff00;"></div>
+              <div class="signal-bar" style="height: 12px; background: #e8ff00;"></div>
+              <div class="signal-bar" style="height: 16px; background: #333;"></div>
+              <div class="signal-bar" style="height: 20px; background: #333;"></div>
+              <div class="signal-bar" style="height: 24px; background: #333;"></div>
+            </div>
+          </div>
+
+          <!-- Prediction -->
+          <p class="text-sm mb-3" style="color: #aaa; line-height: 1.6;">
+            "Sem histórico de saldos de verão. Comunidade a monitorizar atividade no Instagram do fundador."
+          </p>
+          <div class="text-xs mb-6" style="color: #555;">👁️ 12 membros a acompanhar</div>
+
+          <!-- CTA Button -->
+          <button class="btn-ghost w-full border border-[#333] py-3 text-xs font-bold tracking-widest uppercase" style="border-radius: 2px;">
+            TRACK THIS DROP
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NEWSLETTER / ALERT ACTIVATION SECTION -->
+    <section id="alerts" class="border-t" style="background: #0d0d0d; border-color: #1a1a1a;">
+      <div class="px-6 py-24 max-w-lg mx-auto text-center">
+
+        <!-- Eyebrow -->
+        <p class="text-xs font-bold tracking-widest uppercase mb-6" style="color: #555;">[ CHEAT CODE ATIVADO ]</p>
+
+        <!-- Headline -->
+        <h2 class="text-4xl font-extrabold mb-4" style="letter-spacing: -0.03em;">
+          Entra antes de toda a gente.
+        </h2>
+
+        <!-- Body Copy -->
+        <p class="mb-10" style="color: #666; line-height: 1.6;">
+          Recebe alertas 48h antes dos drops. Sem spam. Só sinais.
+        </p>
+
+        <!-- Form -->
+        <form id="alert-form">
+          <input
+            type="email"
+            placeholder="o teu email"
+            required
+            class="w-full p-3 mb-3 text-white focus:outline-none"
+            style="background: #111; border: 1px solid #333; border-radius: 2px; transition: border-color 0.2s;"
+            onfocus="this.style.borderColor='#e8ff00'"
+            onblur="this.style.borderColor='#333'"
+          />
+          <button
+            type="submit"
+            class="w-full p-3 font-bold tracking-widest uppercase text-sm"
+            style="background: #e8ff00; color: #080808; border-radius: 2px; transition: opacity 0.2s;"
+            onmouseover="this.style.opacity='0.85'"
+            onmouseout="this.style.opacity='1'"
+          >
+            ATIVAR ALERTAS
+          </button>
+        </form>
+
+        <!-- Success Message -->
+        <div id="success-msg" class="hidden text-xl font-bold" style="color: #e8ff00;">
+          ✓ Estás dentro. Prepara-te.
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t" style="background: #080808; border-color: #111;">
+    <div class="px-6 py-8 text-center">
+      <div class="text-sm font-bold mb-2" style="color: #333; letter-spacing: -0.02em;">
+        DROP<span style="color: #2a2a00;">//</span>TRACKER
+      </div>
+      <p class="text-xs" style="color: #333;">
+        © 2025 — Feito pela comunidade, para a comunidade. Não somos afiliados a nenhuma marca.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Countdown Timer
+    var countdownTarget = new Date('2025-07-01T00:00:00Z').getTime();
+
+    function pad(n) {
+      return String(n).padStart(2, '0');
+    }
+
+    function updateCountdown() {
+      var now = new Date().getTime();
+      var diff = countdownTarget - now;
+
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent = '00';
+        document.getElementById('cd-hours').textContent = '00';
+        document.getElementById('cd-mins').textContent = '00';
+        document.getElementById('cd-secs').textContent = '00';
+        document.getElementById('cd-expired').classList.remove('hidden');
+        return;
+      }
+
+      var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      var secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent = pad(days);
+      document.getElementById('cd-hours').textContent = pad(hours);
+      document.getElementById('cd-mins').textContent = pad(mins);
+      document.getElementById('cd-secs').textContent = pad(secs);
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Newsletter Form
+    document.getElementById('alert-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      this.classList.add('hidden');
+      document.getElementById('success-msg').classList.remove('hidden');
+    });
+  </script>
+
+</body>
+</html>

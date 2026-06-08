@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(node -e ' *)",
+      "Bash(npm run *)",
+      "Bash(grep *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(Start-Process -NoNewWindow npm -ArgumentList \"run\",\"dev\")",
+      "Bash(Start-Sleep -Seconds 8)",
+      "Bash(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10)",
+      "Bash(Select-Object -ExpandProperty StatusCode)",
+      "PowerShell(cd \"C:\\\\Users\\\\diogo\\\\Desktop\\\\Tracker\"; $proc = Start-Process -PassThru -NoNewWindow -FilePath \"npm\" -ArgumentList \"run\",\"dev\"; Start-Sleep -Seconds 10; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 8; Write-Output \"HTTP $\\($r.StatusCode\\)\" } catch { Write-Output \"Server not ready: $_\" }; $proc.Kill\\(\\))",
+      "PowerShell(Stop-Process *)",
+      "PowerShell(cd \"C:\\\\Users\\\\diogo\\\\Desktop\\\\Tracker\"; $nodeDir = Split-Path \\(Get-Command node\\).Source; $npmCmd = Join-Path $nodeDir \"npm.cmd\"; $proc = Start-Process -PassThru -NoNewWindow -FilePath $npmCmd -ArgumentList \"run\",\"dev\"; Start-Sleep -Seconds 12; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10; Write-Output \"HTTP $\\($r.StatusCode\\) — DEV SERVER OK ✓\" } catch { Write-Output \"Error: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/admin/login\" -UseBasicParsing -TimeoutSec 15; Write-Output \"HTTP $\\($r.StatusCode\\) — /admin/login OK ✓\" } catch { Write-Output \"Error: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(cd \"C:\\\\Users\\\\diogo\\\\Desktop\\\\Tracker\"; $nodeDir = Split-Path \\(Get-Command node\\).Source; $npmCmd = Join-Path $nodeDir \"npm.cmd\"; $proc = Start-Process -PassThru -NoNewWindow -FilePath $npmCmd -ArgumentList \"run\",\"dev\"; Start-Sleep -Seconds 12; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 15; Write-Output \"HTTP $\\($r.StatusCode\\) — HOMEPAGE OK ✓\" } catch { Write-Output \"Erro: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(cd \"C:\\\\Users\\\\diogo\\\\Desktop\\\\Tracker\"; $nodeDir = Split-Path \\(Get-Command node\\).Source; $npmCmd = Join-Path $nodeDir \"npm.cmd\"; $proc = Start-Process -PassThru -NoNewWindow -FilePath $npmCmd -ArgumentList \"run\",\"dev\"; Start-Sleep -Seconds 12; try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 20; Write-Output \"HTTP $\\($r.StatusCode\\) — OK ✓\" } catch { $body = $_.ErrorDetails.Message; Write-Output \"Erro $\\($_.Exception.Response.StatusCode\\): $body\" })",
+      "PowerShell(Get-NetTCPConnection *)",
+      "PowerShell(cd \"C:\\\\Users\\\\diogo\\\\Desktop\\\\Tracker\"; $npmCmd = Join-Path \\(Split-Path \\(Get-Command node\\).Source\\) \"npm.cmd\"; Start-Process -NoNewWindow -FilePath $npmCmd -ArgumentList \"run\",\"dev\"; Write-Output \"Dev server a iniciar em http://localhost:3000\")",
+      "PowerShell(cd \"C:\\\\Users\\\\diogo\\\\Desktop\\\\Tracker\"; \\(Get-Command vercel -EA SilentlyContinue\\) | Select-Object -ExpandProperty Source; \\(Get-Command git -EA SilentlyContinue\\) | Select-Object -ExpandProperty Source)",
+      "PowerShell(cd \"C:\\\\Users\\\\diogo\\\\Desktop\\\\Tracker\"; $npmCmd = Join-Path \\(Split-Path \\(Get-Command node\\).Source\\) \"npm.cmd\"; & $npmCmd install -g vercel 2>&1 | Select-Object -Last 5)"
+    ]
+  }
+}
