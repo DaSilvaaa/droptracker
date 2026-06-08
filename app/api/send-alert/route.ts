@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
     let sent = 0;
     for (const email of emails) {
       await resend.emails.send({
-        from: "DropTracker <alertas@droptracker.com>",
+        from: "DropTracker <onboarding@resend.dev>",
         to: email,
         subject: `DROP PUBLICADO — ${typedDrop.brands.name}`,
         html: `

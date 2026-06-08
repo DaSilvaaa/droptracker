@@ -45,7 +45,7 @@ export async function GET(req: NextRequest) {
 
     for (const email of emails) {
       await resend.emails.send({
-        from: "DropTracker <alertas@droptracker.com>",
+        from: "DropTracker <onboarding@resend.dev>",
         to: email,
         subject: `🚨 DROP EM 48H — ${drop.brands.name}`,
         html: `

@@ -52,7 +52,7 @@ export async function POST(req: NextRequest) {
     const confirmUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/confirm?token=${token}`;
 
     await resend.emails.send({
-      from: "DropTracker <alertas@droptracker.com>",
+      from: "DropTracker <onboarding@resend.dev>",
       to: email,
       subject: "Confirma o teu email — DropTracker",
       html: `
