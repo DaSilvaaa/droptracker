@@ -5,6 +5,8 @@ import { supabase } from "@/lib/supabase";
 import type { Drop, DropHistory } from "@/lib/types";
 import { BrandPageClient } from "./BrandPageClient";
 
+export const dynamic = "force-dynamic";
+
 export function generateStaticParams() {
   return BRAND_SLUGS.map((slug) => ({ slug }));
 }
